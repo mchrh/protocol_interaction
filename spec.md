@@ -500,19 +500,3 @@ If all the above are true, the implementation satisfies this spec.
 ```
 ::contentReference[oaicite:0]{index=0}
 ```
-export MAINNET_RPC_URL="https://eth-mainnet.g.alchemy.com/v2/uFjXhsERTJQQ1WXAyZx8L"
-anvil --fork-url "$MAINNET_RPC_URL"
-
-export MAINNET_RPC_URL="https://eth-mainnet.g.alchemy.com/v2/uFjXhsERTJQQ1WXAyZx8L"
-anvil --fork-url "$MAINNET_RPC_URL"
-
-python -m src.curve_withdraw \
-  --rpc-url http://127.0.0.1:8545 \
-  --impersonated-address 0xf4D898ae2bc5C83E7638DB434f33Dceb8dc7Ab19 \
-  --burn-bps 100 \
-  --dry-run
-
-uv run python -m src.curve_withdraw \
-  --rpc-url http://127.0.0.1:8545 \
-  --impersonated-address 0xf4D898ae2bc5C83E7638DB434f33Dceb8dc7Ab19 \
-  --burn-bps 100

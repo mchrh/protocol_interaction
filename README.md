@@ -1,4 +1,4 @@
-# Curve USDC/crvUSD Single-Sided Withdrawal (Python)
+# Curve USDC/crvUSD Single-Sided Withdrawal
 
 Withdraw single-sided USDC liquidity from the Curve USDC/crvUSD factory pool on an Ethereum mainnet fork using Python and `web3.py`. The script impersonates an LP holder, burns a configurable portion of LP tokens, and withdraws only USDC via `remove_liquidity_one_coin`.
 
@@ -78,8 +78,3 @@ Environment variables (CLI args take precedence):
 - `RPC_URL` for `--rpc-url` (default `http://127.0.0.1:8545`)
 - `IMPERSONATED_ADDRESS` for `--impersonated-address`
 - `BURN_BPS` for `--burn-bps` (default 100 = 1%)
-
-## Notes for Other Fork Tools
-- Hardhat: impersonation RPC method is `hardhat_impersonateAccount`.
-- Ganache: may require unlocked accounts or private keys instead of RPC impersonation.
-- The script is built for Anvil; adapt the impersonation call if your tool differs.
